@@ -15,7 +15,7 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
-module SEMP
+module Seap
   class Application < Rails::Application
 
     # don't generate RSpec tests for views and helpers
@@ -27,6 +27,7 @@ module SEMP
       
       g.view_specs false
       g.helper_specs false
+    config.generators do |g|
     end
 
     # Settings in config/environments/* take precedence over those specified here.
@@ -79,4 +80,5 @@ module SEMP
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
   end
+end
 end

@@ -1,4 +1,5 @@
 <h3>Users</h3>
+<<<<<<< HEAD
 <div class="span8">
 <table class="table table-condensed">
   <thead>
@@ -28,3 +29,12 @@
   </tbody>
 </table>
 </div>
+=======
+<ul class="users">
+  <% @users.each do |user| %>
+    <li>
+      <%= link_to user.name, user %> signed up <%= user.created_at.to_date %>
+    </li>
+  <% end %>
+</ul>
+>>>>>>> 5ed426e1bece990128d2f8d55d142c9d467012a0

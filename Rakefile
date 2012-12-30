@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-SEMP::Application.load_tasks
+Seap::Application.load_tasks
