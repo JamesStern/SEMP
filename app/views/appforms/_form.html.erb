@@ -18,7 +18,7 @@
     <%= f.input :emergency_contact_phone, :label => "Emergency Contact (Phone)" %>
     <%= f.input :other_prog, :label => "Were you in the SEAP Program Before? If so, please indicate which laboratory under Other." %>
     <%= f.input :school, :label=> "High School" %>
-    <%= f.input :current_grade, :collection => [:Tenth, :Eleventh, :Twelth], :include_blank => false %>
+    <%= f.input :current_grade, :collection => 10..12, :include_blank => false %>
     <%= f.input :scores, :label => "SAT/PSAT Scores (Enter N/A if you have not taken the SAT/PSAT)" %>
     <%= f.input :math_courses, :as => :check_boxes, :collection => [:"Algebra 1", :"Algebra 2", :Calculus, :"AP Calculus" ], :label => "Please select the math courses that you have taken or are currently taking." %>
     <%= f.input :science_courses, :as => :check_boxes, :collection => [:"Physics", :"AP Physics", :"Chemistry", :"AP Chemistry", :"Biology", :"AP Biology", :"Anatomy/Physiology", :"Genetics", :other ], :label => "Please select the science courses that you have taken or are currently taking." %>
