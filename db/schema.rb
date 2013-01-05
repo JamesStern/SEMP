@@ -11,8 +11,38 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(:version => 20121230004020) do
+ActiveRecord::Schema.define(:version => 20121230153344) do
+
+  create_table "appforms", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip_code"
+    t.string   "phone_number"
+    t.string   "email"
+    t.integer  "age"
+    t.string   "gender"
+    t.boolean  "citizen"
+    t.string   "emergency_contact"
+    t.string   "emergency_contact_phone"
+    t.string   "other_prog"
+    t.string   "school"
+    t.string   "current_grade"
+    t.string   "scores"
+    t.string   "math_courses"
+    t.string   "science_courses"
+    t.text     "programming"
+    t.string   "LOR_names"
+    t.text     "essay1"
+    t.text     "essay2"
+    t.text     "essay3"
+    t.boolean  "confirm"
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
+    t.integer  "user_id"
+  end
 
   create_table "roles", :force => true do |t|
     t.string   "name"
@@ -24,9 +54,6 @@ ActiveRecord::Schema.define(:version => 20121230004020) do
 
   add_index "roles", ["name", "resource_type", "resource_id"], :name => "index_roles_on_name_and_resource_type_and_resource_id"
   add_index "roles", ["name"], :name => "index_roles_on_name"
-=======
-ActiveRecord::Schema.define(:version => 20121230000021) do
->>>>>>> 5ed426e1bece990128d2f8d55d142c9d467012a0
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -47,7 +74,6 @@ ActiveRecord::Schema.define(:version => 20121230000021) do
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
-<<<<<<< HEAD
   create_table "users_roles", :id => false, :force => true do |t|
     t.integer "user_id"
     t.integer "role_id"
@@ -55,6 +81,4 @@ ActiveRecord::Schema.define(:version => 20121230000021) do
 
   add_index "users_roles", ["user_id", "role_id"], :name => "index_users_roles_on_user_id_and_role_id"
 
-=======
->>>>>>> 5ed426e1bece990128d2f8d55d142c9d467012a0
 end

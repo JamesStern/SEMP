@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :appforms
+  
   rolify
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
@@ -8,6 +10,6 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :role_ids, :as => :admin
-  attr_accessible :name, :email, :password, :password_confirmation, :remember_me
+  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :user_id
   
 end

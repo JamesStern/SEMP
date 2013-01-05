@@ -1,0 +1,33 @@
+<h1>SEAP Applications</h1>
+
+<table>
+  <tr>
+    <th>Last name</th>
+    <th>First name</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Phone number</th>
+    <th>Email</th>
+    <th>Age</th>
+    <th>Gender</th>
+  </tr>
+
+<% @appforms.each do |appform| %>
+  <tr>
+    <td><%= appform.last_name %></td>
+    <td><%= appform.first_name %></td>
+    <td><%= appform.city %></td>
+    <td><%= appform.state %></td>
+    <td><%= appform.phone_number %></td>
+    <td><%= appform.email %></td>
+    <td><%= appform.age %></td>
+    <td><%= appform.gender %></td>
+    <td><%= link_to 'Show', appform %></td>
+    <td><%= link_to 'Destroy', appform, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Appform', new_appform_path %>

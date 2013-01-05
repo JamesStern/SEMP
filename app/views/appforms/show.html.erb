@@ -1,0 +1,129 @@
+<%= link_to 'Edit Your Application', edit_appform_path(@appform) %></br></br>
+
+<p>
+  <b>First name:</b>
+  <%= @appform.first_name %>
+</br>
+
+  <b>Last name:</b>
+  <%= @appform.last_name %>
+</br>
+
+
+  <b>Address:</b>
+  <%= @appform.address %>
+</br>
+
+
+  <b>City:</b>
+  <%= @appform.city %>
+</br>
+
+
+  <b>State:</b>
+  <%= @appform.state %>
+</br>
+
+
+  <b>Zip code:</b>
+  <%= @appform.zip_code %>
+</br>
+
+
+  <b>Phone number:</b>
+  <%= @appform.phone_number %>
+</br>
+
+
+  <b>Email:</b>
+  <%= @appform.email %>
+</br>
+
+
+  <b>Age:</b>
+  <%= @appform.age %>
+</br>
+
+
+  <b>Gender:</b>
+  <%= @appform.gender %>
+</br>
+
+
+  <b>Are you a U.S. Citizen?</b>
+  <%= @appform.citizen %>
+</br>
+
+<p>
+  <b>Emergency Contact (Name):</b>
+  <%= @appform.emergency_contact %>
+</br>
+
+
+  <b>Emergency Contact (Phone):</b>
+  <%= @appform.emergency_contact_phone %>
+</p>
+
+<p>
+  <b>Were you in the SEAP Program Before? If so, please indicate which laboratory under "Other":</b>
+  <%= @appform.other_prog %>
+</br>
+
+
+  <b>High School:</b>
+  <%= @appform.school %>
+</br>
+
+
+  <b>Current Grade:</b>
+  <%= @appform.current_grade %>
+</br>
+
+
+  <b>SAT/PSAT Scores (Enter N/A if you have not taken the SAT/PSAT):</b>
+  <%= @appform.scores %>
+</br>
+
+
+  <b>Please select the math courses that you have taken or are currently taking.</b>
+  <%= @appform.math_courses %>
+</br>
+
+
+  <b>Please select the science courses that you have taken or are currently taking.</b>
+  <%= @appform.science_courses %>
+</br>
+
+<p>
+  <b>Please briefly describe your computer programming experience (including programming languages and applicaitons -- i.e., Matlab, C++, etc.)</b></br>
+  <%= @appform.programming %>
+</p>
+
+<p>
+  <b>Please Indicate the Name(s) of the Individual Submitting your Letter(s) of Recommendation. Note: it is YOUR RESPONSIBILITY to contact them and have them send in their letters of reference!</b></br>
+  <%= @appform.LOR_names %>
+</p>
+
+<p>
+  <b>Please list the research activities in which you have participated; provide additional details on those you particularly enjoyed. Please include science, IT, and mathematics activities. (Limit your repsonse to approximately 500 words):</b></br>
+  <%= @appform.essay1 %>
+</p>
+
+<p>
+  <b>Please describe your major academic, career and research areas of interests (Limit your repsonse to approximately 500 words):</b></br>
+  <%= @appform.essay2 %>
+</p>
+
+<p>
+  <b>Please describe why you would like to take part in the SEAP program (Limit your repsonse to approximately 500 words):</b></br>
+  <%= @appform.essay3 %>
+</p>
+
+<p>
+  <b>I understand that I am applying to the SEAP Program at Analytic Services, Inc. (ANSER), and that this is a commuting program so I am responsible for my own housing. I understand that my applicaiton will not be processed until it is complete -- this online form, one or two letters of recommendation and a high school transcript (unofficial is acceptable) are required. If I am under age 18, I have my parent's permission to apply for the SEAP program. Letters of Recommendation and transcripts may be mailed or emailed to the address at the top of this application. Please contact the GW SEAP office with any questions at 202-994-2234 or by email to seap@gwu.edu. Thanks for your application!</b></br>
+  <%= @appform.confirm %>
+</p>
+
+
+<%= link_to 'Edit', edit_appform_path(@appform) %> |
+<%= link_to 'Back', appforms_path %>

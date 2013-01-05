@@ -1,8 +1,14 @@
 Seap::Application.routes.draw do
 
+  resources :appforms
+
   match '/about', to: "static_pages#about"
 
-  match '/contact', to: 'static_pages#contact'
+  match '/experience', to: 'static_pages#experience'
+
+  match'/questions', to: 'static_pages#questions'
+
+  match '/goals', to: 'static_pages#goals'
 
   authenticated :user do
     root :to => 'home#index'

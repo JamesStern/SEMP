@@ -5,6 +5,9 @@ class StaticPagesController < ApplicationController
   def about
   end
 
-  def contact
+  def experience
+  end
+
+  def questions
   end
 end
