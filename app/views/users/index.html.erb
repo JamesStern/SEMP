@@ -1,5 +1,6 @@
-<h3>Users</h3>
+<h2>Users</h2>
 <div class="span8">
+  <h4><%= link_to 'Review Appforms', appforms_path %></h4>
 <table class="table table-condensed">
   <thead>
     <tr>
@@ -22,16 +23,10 @@
         <a data-toggle="modal" href="#role-options-<%= user.id %>" class="btn btn-mini" type="button">Change role</a>
         <%= render user %>
       </td>
-      <td><%= link_to("Delete user", user_path(user), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini') unless user == current_user %></td>
+      <td><%= link_to("Delete user", user_path(user), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini') unless user == current_user %></td><td></td><td></td>
     </tr>
   <% end %>
   </tbody>
 </table>
 </div>
-<ul class="users">
-  <% @users.each do |user| %>
-    <li>
-      <%= link_to user.name, user %> signed up <%= user.created_at.to_date %>
-    </li>
-  <% end %>
-</ul>
+
