@@ -1,6 +1,10 @@
 class ChangeColumn < ActiveRecord::Migration
-  def change
-  	change_column :appform, :current_grade, :integer
+  def up
+  	connection.execute(%q{
+    alter table appform
+    alter column current_grade
+    type integer using cast(number as integer)
+  })
   end
 
 end
