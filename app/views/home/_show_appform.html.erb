@@ -1,5 +1,3 @@
-<% if user_signed_in? %>
-  <% if current_user.has_role? :admin %>
 <h3>SEAP Applications</h3>
 
 <table>
@@ -14,7 +12,7 @@
     <th>Gender</th>
   </tr>
 
-<% @appforms.each do |appform| %>
+<% appforms.each do |appform| %>
   <tr>
     <td><%= appform.last_name %></td>
     <td><%= appform.first_name %></td>
@@ -33,6 +31,3 @@
 <br />
 
 <%= link_to 'New Appform', new_appform_path %>
-
-<% end %>
-<% end %>

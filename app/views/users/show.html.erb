@@ -1,3 +1,16 @@
-<h3>User</h3>
-<p>User: <%= @user.name %></p>
-<p>Email: <%= @user.email if @user.email %></p>
+<% if user_signed_in? %>
+  <% if current_user.id == @user.id %>
+<h3>Applicant Portal</h3>
+<p><b>User:</b> <%= @user.name %><br />
+	<b>Email:</b> <%= @user.email if @user.email %></p>
+<%= render :partial=> 'show_appform', :locals => {:appforms => @user.appforms} %>
+
+<br>
+<% if @user.appforms.count == 0 %>  
+<%= link_to 'New Appform', new_appform_path %>
+<% end %>
+
+<% end %>
+<% else %>
+ 
+<% end %>

@@ -1,4 +1,6 @@
-<%= simple_form_for(@appform) do |f| %>
+<h2>New Application</h2>
+
+<%= simple_form_for(appform) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
@@ -7,7 +9,7 @@
     <%= f.input :last_name %>
     <%= f.input :address %>
     <%= f.input :city %>
-    <%= f.input :state, :collection => [:Alabama, :Alaska, :"American Samoa", :Arizona, :Arkansas, :California, :Colorado, :Connecticut, :Delaware, :"District of Columbia", :Florida, :Georgia, :Guam, :Hawaii, :Idaho, :Illinois, :Indiana, :Iowa, :Kansas, :Kentucky, :Louisiana, :Maine, :Maryland, :Massachusetts, :Michigan, :Minnesota, :Mississippi, :Missouri, :Montana, :Nebraska, :Nevada, :"New Hampshire", :"New Jersey", :"New Mexico", :"New York", :"North Carolina", :"North Dakota", :"Northern Marianas Islands", :Ohio, :Oklahoma, :Oregon, :Pennsylvania, :"Puerto Rico", :"Rhode Island", :"South Carolina", :"South Dakota", :Tennessee, :Texas, :Utah, :Vermont, :Virginia, :"Virgin Islands", :Washington, :"West Virginia", :Wisconsin, :Wyoming], :include_blank => false  %>
+    <%= f.input :state, :collection => [:Alabama, :Alaska, :"American Samoa", :Arizona, :Arkansas, :California, :Colorado, :Connecticut, :Delaware, :"District of Columbia", :Florida, :Georgia, :Guam, :Hawaii, :Idaho, :Illinois, :Indiana, :Iowa, :Kansas, :Kentucky, :Louisiana, :Maine, :Maryland, :Massachusetts, :Michigan, :Minnesota, :Mississippi, :Missouri, :Montana, :Nebraska, :Nevada, :"New Hampshire", :"New Jersey", :"New Mexico", :"New York", :"North Carolina", :"North Dakota", :"Northern Marianas Islands", :Ohio, :Oklahoma, :Oregon, :Pennsylvania, :"Puerto Rico", :"Rhode Island", :"South Carolina", :"South Dakota", :Tennessee, :Texas, :Utah, :Vermont, :Virginia, :"Virgin Islands", :Washington, :"West Virginia", :Wisconsin, :Wyoming], :include_blank => false %>
     <%= f.input :zip_code %>
     <%= f.input :phone_number %>
     <%= f.input :email %>
@@ -16,17 +18,17 @@
     <%= f.input :citizen, :as => :radio, :options => [[true, 'Yes'],[false, 'No']], :label => "Are you a U.S. Citizen?"%>
     <%= f.input :emergency_contact, :label => "Emergency Contact (Name)" %>
     <%= f.input :emergency_contact_phone, :label => "Emergency Contact (Phone)" %>
-    <%= f.input :other_prog, :label => "Were you in the SEAP Program Before? If so, please indicate which laboratory." %>
+    <%= f.input :other_prog, :label => "Were you in the SEAP Program Before? If so, please indicate which laboratory under Other." %>
     <%= f.input :school, :label=> "High School" %>
     <%= f.input :current_grade, :collection => 10..12, :include_blank => false %>
     <%= f.input :scores, :label => "SAT/PSAT Scores (Enter N/A if you have not taken the SAT/PSAT)" %>
     <%= f.input :math_courses, :as => :check_boxes, :collection => [:"Algebra 1", :"Algebra 2", :Calculus, :"AP Calculus" ], :label => "Please select the math courses that you have taken or are currently taking." %>
     <%= f.input :science_courses, :as => :check_boxes, :collection => [:"Physics", :"AP Physics", :"Chemistry", :"AP Chemistry", :"Biology", :"AP Biology", :"Anatomy/Physiology", :"Genetics", :other ], :label => "Please select the science courses that you have taken or are currently taking." %>
     <%= f.input :programming, :label => "Please briefly describe your computer programming experience (including programming languages and applicaitons -- i.e., Matlab, C++, etc.)" %>
-    <%= f.input :LOR_names, :as => :text, :label => "Please Indicate the Name and email address of the Individual(s) Submitting your Letter(s) of Recommendation.  If you are submitting just 1 Letter of Recommendation, please indicate “N/A” for the second reference.  Note: it is YOUR RESPONSIBILITY to contact them and have them send in their letters of reference!", :hint => "Please format your response as follows: Reference 1: Name, email..."%>
-    <%= f.input :essay1, :label => "Please list the research activities in which you have participated; provide additional details on those you particularly enjoyed. Please include science, IT, and mathematics activities. (Limit your repsonse to approximately 500 words):" %>
+    <%= f.input :LOR_names, :label => "Please Indicate the Name(s) of the Individual Submitting your Letter(s) of Recommendation. Note: it is YOUR RESPONSIBILITY to contact them and have them send in their letters of reference!" %>
+    <%= f.input :essay1, :label => "Please list the research activities in which you have participated: provide additional details on those you particularly enjoyed. Please include science, IT, and mathematics activities. (Limit your repsonse to approximately 500 words):" %>
     <%= f.input :essay2, :label => "Please describe your major academic, career and research areas of interests (Limit your repsonse to approximately 500 words):" %>
-    <%= f.input :essay3, :label => "Please describe why you would like to take part in the SEAP program (Limit your repsonse to approximately 500 words):" %>
+    <%= f.input :essay3, :input_html=> { :size => 40}, :label => "Please describe why you would like to take part in the SEAP program (Limit your repsonse to approximately 500 words):" %>
     <%= f.input :confirm, :as => :radio, :options => [[true, 'Yes'],[false, 'No']], :label => "I understand that I am applying to the SEAP Program at Analytic Services, Inc. (ANSER), and that this is a commuting program so I am responsible for my own housing. I understand that my applicaiton will not be processed until it is complete -- this online form, one or two letters of recommendation and a high school transcript (unofficial is acceptable) are required. If I am under age 18, I have my parent's permission to apply for the SEAP program. Letters of Recommendation and transcripts may be mailed or emailed to the address at the top of this application. Please contact the GW SEAP office with any questions at 202-994-2234 or by email to seap@gwu.edu. Thanks for your application!" %>
   </div>
 
@@ -34,3 +36,6 @@
     <%= f.button :submit %>
   </div>
 <% end %>
+
+
+

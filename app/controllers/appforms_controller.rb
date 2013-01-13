@@ -1,7 +1,7 @@
 class AppformsController < ApplicationController
   # GET /appforms
   # GET /appforms.json
-  def index
+  def index 
     @appforms = Appform.all
 
     respond_to do |format|
@@ -40,11 +40,12 @@ class AppformsController < ApplicationController
   # POST /appforms
   # POST /appforms.json
   def create
-    @appform = Appform.new(params[:appform])
+    @user = current_user
+    @appform = @user.appforms.create(params[:appform])
 
     respond_to do |format|
       if @appform.save
-        format.html { redirect_to @appform, notice: 'Your application was successfully created.' }
+        format.html { redirect_to root_url, notice: 'Your application was successfully created.' }
         format.json { render json: @appform, status: :created, location: @appform }
       else
         format.html { render action: "new" }
@@ -60,7 +61,7 @@ class AppformsController < ApplicationController
 
     respond_to do |format|
       if @appform.update_attributes(params[:appform])
-        format.html { redirect_to @appform, notice: 'Your application was successfully updated.' }
+        format.html { redirect_to root_url, notice: 'Your application was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -76,7 +77,7 @@ class AppformsController < ApplicationController
     @appform.destroy
 
     respond_to do |format|
-      format.html { redirect_to appforms_url }
+      format.html { redirect_to root_url }
       format.json { head :no_content }
     end
   end

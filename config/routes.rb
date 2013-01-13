@@ -11,13 +11,13 @@ Seap::Application.routes.draw do
   match '/goals', to: 'static_pages#goals'
 
   authenticated :user do
-    root :to => 'home#index'
+    root :to => 'users#show'
   end
   root :to => "static_pages#home"
   authenticated :user do
-    root :to => 'home#index'
+    root :to => 'users#index'
   end
-  root :to => "home#index"
+  root :to => "users#index"
   devise_for :users
   resources :users
 end
