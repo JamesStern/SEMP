@@ -6,11 +6,11 @@
 <%= render :partial=> 'show_appform', :locals => {:appforms => @user.appforms} %>
 
 <br>
+<div class="newapp">
 <% if @user.appforms.count == 0 %>  
-<%= link_to 'New Appform', new_appform_path %>
+<a class="btn btn-large btn-block btn-success" href="/appforms/new">Start Your Application!</a>
 <% end %>
-
+</div>
 <% end %>
-<% else %>
  
 <% end %>
