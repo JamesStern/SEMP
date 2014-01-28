@@ -215,6 +215,7 @@ DEPENDENCIES
   jquery-rails
   launchy (>= 2.1.2)
   less-rails (>= 2.2.6)
+  libv8 (>= 3.11.8)
   pg
   quiet_assets (>= 1.0.1)
   rails (= 3.2.8)
